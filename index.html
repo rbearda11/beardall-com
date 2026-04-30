@@ -3,39 +3,41 @@
 <head>
   <title>Beardall Family</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
+      <script>
+  const password = "slidedeck"; // change this
+
+  let userInput = prompt("Enter password:");
+
+  if (userInput !== password) {
+    document.body.innerHTML = "<h1>Access Denied</h1>";
+  }
+</script>
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f7f9fc;
+      background: #eef2f7;
       color: #1f2937;
+    }
+
+    .app {
+      max-width: 900px;
+      margin: auto;
     }
 
     header {
       background: linear-gradient(135deg, #4a6fa5, #6b9ac4);
       color: white;
-      padding: 60px 20px;
+      padding: 40px 20px;
+      border-radius: 0 0 20px 20px;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      opacity: 0.9;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: -40px auto 40px;
-      padding: 0 20px;
     }
 
     .grid {
       display: grid;
       gap: 20px;
+      padding: 20px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
@@ -44,15 +46,11 @@
       padding: 25px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
+      transition: 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-    }
-
-    .card h2 {
-      margin-top: 0;
     }
 
     a {
@@ -65,35 +63,37 @@
 
 <body>
 
+<div class="app">
+
 <header>
   <h1>Beardall Family</h1>
-  <p>Our shared space for photos, plans, and updates</p>
+  <p>Photos • Plans • Shared Life</p>
 </header>
 
-<div class="container">
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h2>📸 Photos</h2>
-      <p><a href="photos.html">View gallery</a></p>
-    </div>
-
-    <div class="card">
-      <h2>🗓️ Calendar</h2>
-      <p><a href="calendar.html">See events</a></p>
-    </div>
-
-    <div class="card">
-      <h2>📄 Documents</h2>
-      <p><a href="https://https://drive.google.com/drive/u/1/my-drive">Family Documents</a></p>
-    </div>
-
-    <div class="card">
-      <h2>💬 Updates</h2>
-      <p>Latest family news</p>
-    </div>
-
+  <div class="card">
+    <h2>📸 Photos</h2>
+    <a href="photos.html">Open Gallery</a>
   </div>
+
+  <div class="card">
+    <h2>🗓️ Calendar</h2>
+    <a href="calendar.html">View Events</a>
+  </div>
+
+  <div class="card">
+    <h2>📄 Documents</h2>
+    <a href="https://drive.google.com">Open Docs</a>
+  </div>
+
+  <div class="card">
+    <h2>💬 Updates</h2>
+    <a href="updates.html">See Updates</a>
+  </div>
+
+</div>
+
 </div>
 
 </body>
