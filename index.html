@@ -5,31 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4a6fa5, #6b9ac4);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
-    header {
-      background: #4a6fa5;
-      color: white;
-      padding: 40px 20px;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
-    section {
-      padding: 30px 20px;
+
+    header p {
+      opacity: 0.9;
     }
+
+    .container {
+      max-width: 900px;
+      margin: -40px auto 40px;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
     .card {
       background: white;
-      margin: 15px auto;
-      padding: 20px;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
     a {
-      color: #4a6fa5;
       text-decoration: none;
+      color: #4a6fa5;
       font-weight: bold;
     }
   </style>
@@ -38,31 +66,35 @@
 <body>
 
 <header>
-  <h1>Welcome to the Beardall Family Page</h1>
-  <p>Our little corner of the internet ❤️ and only the beginning</p>
+  <h1>Beardall Family</h1>
+  <p>Our shared space for photos, plans, and updates</p>
 </header>
 
-<section>
-  <div class="card">
-    <h2>📸 Photos</h2>
-    <p><a href="#">View our photo albums</a></p>
-  </div>
+<div class="container">
+  <div class="grid">
 
-  <div class="card">
-    <h2>🗓️ Family Calendar</h2>
-    <p><a href="#">See upcoming events</a></p>
-  </div>
+    <div class="card">
+      <h2>📸 Photos</h2>
+      <p><a href="photos.html">View gallery</a></p>
+    </div>
 
-  <div class="card">
-    <h2>🔗 Useful Links</h2>
-    <p><a href="#">Shared documents</a></p>
-  </div>
+    <div class="card">
+      <h2>🗓️ Calendar</h2>
+      <p><a href="calendar.html">See events</a></p>
+    </div>
 
-  <div class="card">
-    <h2>💬 Updates</h2>
-    <p>Latest news and notes from the family</p>
+    <div class="card">
+      <h2>📄 Documents</h2>
+      <p><a href="#">Shared files</a></p>
+    </div>
+
+    <div class="card">
+      <h2>💬 Updates</h2>
+      <p>Latest family news</p>
+    </div>
+
   </div>
-</section>
+</div>
 
 </body>
 </html>
