@@ -1,29 +1,100 @@
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beardall Family</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="nav">
-  <div>Beardall Family</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="photos.html">Photos</a>
-    <a href="calendar.html">Calendar</a>
-    <a href="updates.html">Updates</a>
+  <style>
+    body {
+      <script>
+  const password = "slidedeck"; // change this
+
+  let userInput = prompt("Enter password:");
+
+  if (userInput !== password) {
+    document.body.innerHTML = "<h1>Access Denied</h1>";
+  }
+</script>
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #eef2f7;
+      color: #1f2937;
+    }
+
+    .app {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4a6fa5, #6b9ac4);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 0 0 20px 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    a {
+      text-decoration: none;
+      color: #4a6fa5;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+  <h1>Beardall Family</h1>
+  <p>Photos • Plans • Shared Life</p>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>📸 Photos</h2>
+    <a href="photos.html">Open Gallery</a>
   </div>
-</div>
 
-<div class="container">
+  <div class="card">
+    <h2>🗓️ Calendar</h2>
+    <a href="calendar.html">View Events</a>
+  </div>
 
-<div class="card">
-  <h2>Welcome</h2>
-  <p>Family hub for everything important.</p>
-</div>
+  <div class="card">
+    <h2>📄 Documents</h2>
+    <a href="https://drive.google.com">Open Docs</a>
+  </div>
 
-<div class="card">
-  <h2>Quick Access</h2>
-  <ul>
-    <li><a href="photos.html">Photos</a></li>
-    <li><a href="calendar.html">Calendar</a></li>
-    <li><a href="updates.html">Updates</a></li>
-  </ul>
-</div>
+  <div class="card">
+    <h2>💬 Updates</h2>
+    <a href="updates.html">See Updates</a>
+  </div>
 
 </div>
+
+</div>
+
+</body>
+</html>
