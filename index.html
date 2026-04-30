@@ -3,18 +3,17 @@
 <head>
   <title>Beardall Family</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  const password = "slidedeck";
+  const userInput = prompt("Enter password:");
+
+  if (userInput !== password) {
+    document.write("<h1>Access Denied</h1>");
+  }
+</script>
 
   <style>
     body {
-      <script>
-  const password = "slidedeck"; // change this
-
-  let userInput = prompt("Enter password:");
-
-  if (userInput !== password) {
-    document.body.innerHTML = "<h1>Access Denied</h1>";
-  }
-</script>
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       background: #eef2f7;
